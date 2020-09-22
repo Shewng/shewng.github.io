@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+* {
+    box-sizing: border-box;
+}
+
+hr {
+    margin: 4em auto; 
+    top: 50%;
+    width: 75%;
+    border-top: 1px solid #ccc;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 3vw;
+}
+
+.main {
+    margin-top: 100px;
+}
+
+
+/*to apply font and capitalization*/
+.text-properties * {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    color: black;
+}
+
+.text-properties-less * {
+    text-decoration: none;
+    font-weight: lighter;
+    font-family: 'Playfair Display', serif;
+    color: black;
+}
+
+.text-properties-lesser * {
+    text-decoration: none;
+    font-weight: lighter;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+
+
+/*header*/
+.header-bar {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: white;
+}
+
+.header-bar a {
+    float: left;
+    display: block;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px 20px;
+}
+
+.header-bar-left a {
+    position: relative;
+    float: left;
+}
+
+.header-bar-center a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-bar-right a {
+    position: relative;
+    float: right;
+}
+
+.header-bar a.header-bar-anim::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 18px;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.header-bar a.header-bar-anim:hover::before {
+    visibility: visible;
+    transform: scaleX(0.7);
+}
+
+a.header-title-uppercase {
+    overflow-wrap: break-word;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Overlock', sans-serif;
+}
+
+a.header-text-uppercase {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+/*just one article*/
+.article-1-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 10px 50px 0px;
+}
+
+.article-1-row-section {
+    flex: 45%;
+    padding: 0px 15px 0px 15px;
+}
+
+
+/*2 articles in a row*/
+.article-2-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.article-2-row-section {
+    flex: 45%;
+    padding: 15px;
+}
+
+
+/*3 articles in a row*/
+.article-3-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.article-3-row-section {
+    flex: 30%;
+    padding: 10px;
+}
+
+
+/*4 articles in a row*/
+.article-4-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.article-4-row-section {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    flex: 18%;
+    padding: 15px;
+}
+
+
+/*large text on main page*/
+.highlight * {
+    text-align: center;
+    text-decoration: none;
+    font-weight: lighter;
+    color: black;
+}
+
+.highlight-title a {
+    text-transform: uppercase;
+    padding: 6px 4px;
+    font-size: 6vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+.highlight-subtitle {
+    padding: 6px 4px;
+    font-size: 3vw;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+
+/*buttons when needed*/
+/*maybe move this all to .view-article-button*/
+.button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    padding: 6px 26px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.view-article-button {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+}
+
+.view-article-button:hover {
+    background-color:lightgray;
+    border: 1px solid gray;
+}
+
+
+/*for the article formatting on the main page*/
+/*might be able to just do homepage-article-picture instead*/
+.homepage-article-picture {
+    height: auto;
+    width: 100%;
+}
+
+.homepage-article-date {
+    font-size: 14px;
+}
+
+.homepage-article-title {
+    font-size: 22px;
+}
+
+.homepage-article-title:hover a {
+    color: gray;
+}
+
+.homepage-article-author {
+    font-size: 16px;
+}
+
+/*footer*/
+.footer {
+    color: white;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    height: 250px;
+}
+
+.newsletter-form * {
+    color: lightgray;
+}
+
+input[type=text] {
+    padding: 6px 6px;
+    margin: 14px 0px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.footer-social-media {
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer-social-media a {
+    padding: 10px 5px;
+    width: 25px;
+    height: 25px;
+    line-height: 0px !important;
+    position: relative;
+    margin: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: black;
+    color: white;
+}
+
+.fa-youtube {
+    background-color: black;
+    color: white;
+}
+
+.fa-instagram {
+    background-color: black;
+    color: white;
+}
+
+
+/*article page*/
+
+.article-page-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.article-page-article {
+    flex: 30%;
+    padding: 10px;
+}
+
+.article-page-article img {
+    max-width: 80%;
+    height: auto;
+}
+
+
+/*articles themselves*/
+.article-title h1 {
+    color: #1f1f1f;
+    font-size: 7vw;
+    margin: 50px;
+}
+
+.article-subtitle h3 {
+    color: #1f1f1f;
+    font-size: 3vw;
+    margin: 50px;
+}
+
+.article-header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-content {
+    font-size: 22px;
+    margin: 50px 10em 50px 10em;
+}
+
+.article-content h3 {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/*about page*/
+.about-page-content {
+    margin: 50px 10em 50px 10em;
+}
+
+.about-page-content h2 {
+    font-size: 5vw;
+}
+
+.about-page-content p {
+    font-size: 22px;
+}
+
+.posting-schedule table, td, th {
+    border: 1px solid gray;
+    text-align: left;
+}
+
+.posting-schedule h3 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.posting-schedule-table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.posting-schedule th, td {
+    padding: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+      flex-direction: column;
+    }
+}
+  
+/*responsive layout*/
+@media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width:100%;
+    }
+}
